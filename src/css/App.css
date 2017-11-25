@@ -1,0 +1,14 @@
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  text-align: center;
+  padding: 1.5em 0;
+  border-bottom: solid rgba(0,0,0,0.2) 1px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
