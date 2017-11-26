@@ -1,14 +1,28 @@
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   text-align: center;
-  padding: 1.5em 0;
   border-bottom: solid rgba(0,0,0,0.2) 1px;
 }
 
 .App-title {
   font-size: 1.5em;
+}
+
+.Chart-group {
+  position: relative;
+  display: flex;
+  padding: 1em 2em 0 2em;
+}
+
+.Chart {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Chart p {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0.5em 0;
+  text-align: center;
 }
