@@ -30,6 +30,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Bayesian Learning Demo</h1>
+          <p className="App-subtitle">Work in progress; See <a href='https://github.com/activatedgeek/bayesian-learning-demo'>activatedgeek/bayesian-learning-demo</a></p>
         </header>
         <div className="Chart-group">
           <div className="Chart">
