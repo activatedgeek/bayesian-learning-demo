@@ -30,3 +30,43 @@
   margin: 0.5em 0;
   text-align: center;
 }
+
+.Input-params {
+  padding: 1em;
+}
+
+.Input-params-box {
+  display: flex;
+  align-items: center;
+}
+
+.Input-params-box input {
+  margin: 0 1em;
+  font-size: 1.5em;
+}
+
+.Input-params-box .Input-warn {
+  font-size: 0.8em;
+}
+
+.Explainer-box {
+  padding: 0 1em;
+}
+
+.Explainer-concepts {
+  display: flex;
+  align-items: center;
+}
+
+.Concept-box {
+  padding: 0.5em;
+}
+
+.Concept-title {
+  font-weight: bold;
+}
+
+.Concept-confidence {
+  font-style: italic;
+  padding: 0 0.5em;
+}

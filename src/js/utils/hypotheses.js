@@ -79,7 +79,7 @@ const getHypotheses = (data, a, b) => {
     numberList.push(i);
   }
 
-  return rawHypotheses.map(({title, h, raw_prior}) => {
+  const hypotheses = rawHypotheses.map(({title, h, raw_prior}) => {
     const likelihood = isExtension(data, h) ?
       1.0 / Math.pow(numberList.filter(h).length, data.length) : 0.0;
     const prior = raw_prior / raw_prior_sum;
@@ -91,6 +91,12 @@ const getHypotheses = (data, a, b) => {
       posterior
     }}
   );
+
+  const evidenceSum = hypotheses.map(({posterior}) => posterior).reduce((x,y)=>x+y);
+  return hypotheses.map(({posterior, ...others}) => ({
+    ...others,
+    posterior: posterior / evidenceSum
+  }));
 };
 
 export {isMultipleOf, endsIn, isPowerOf, isSquare, isPowerOf2Minus32, isPowerOf2Plus37};

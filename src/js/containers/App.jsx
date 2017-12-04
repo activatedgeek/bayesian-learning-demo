@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Chart from './Chart';
+import InputParams from './InputParams';
+import Explainer from './Explainer';
 import getHypotheses from '../utils/hypotheses';
 import '../../css/App.css';
 
@@ -7,31 +9,32 @@ class App extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      data: [],
+      dataset: [16],
       a: 1,
-      b: 50
+      b: 100
     };
   }
 
-  componentWillMount() {
-    const dataList = [[16],[1,2,3], [2,4,8], [10,20,30], [2,4,8,16]];
-    const n = dataList.length;
-    let i = 0;
-    window.setInterval(() => {
-      this.setState({data: dataList[i]});
-      i = (i + 1) % n;
-    }, 5000);
-  }
+  onUpdate = (dataset) => {
+    this.setState({dataset});
+  };
 
   render() {
-    const {data, a, b} = this.state;
-    const hypothesesList = getHypotheses(data, a, b);
+    const {dataset, a, b} = this.state;
+    const hypothesesList = getHypotheses(dataset, a, b);
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Bayesian Learning Demo</h1>
-          <p className="App-subtitle">Work in progress; See <a href='https://github.com/activatedgeek/bayesian-learning-demo'>activatedgeek/bayesian-learning-demo</a></p>
+          <p className="App-subtitle">
+            Code: <a href='https://github.com/activatedgeek/bayesian-learning-demo'>activatedgeek/bayesian-learning-demo</a>
+          </p>
+          <p className="App-subtitle">
+            Supporting Blog Post: <a href='https://www.sanyamkapoor.com//machine-learning/the-beauty-of-bayesian-learning/'>The Beauty of Bayesian Learning</a>
+          </p>
         </header>
+        <InputParams a={a} b={b} onUpdate={this.onUpdate} />
+        <Explainer data={hypothesesList} />
         <div className="Chart-group">
           <div className="Chart">
             <p>Prior</p>
