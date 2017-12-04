@@ -32,7 +32,7 @@
 }
 
 .Input-params {
-  padding: 1em;
+  padding: 0 1em;
 }
 
 .Input-params-box {
@@ -40,13 +40,17 @@
   align-items: center;
 }
 
-.Input-params-box input {
+.Input-params-box input[type="text"] {
   margin: 0 1em;
   font-size: 1.5em;
 }
 
 .Input-params-box .Input-warn {
   font-size: 0.8em;
+}
+
+.Input-params-button {
+  font-size: 1em;
 }
 
 .Explainer-box {
@@ -59,7 +63,7 @@
 }
 
 .Concept-box {
-  padding: 0.5em;
+  padding: 0 0.5em;
 }
 
 .Concept-title {

@@ -4,10 +4,9 @@ class Explainer extends Component {
   render() {
     const {data} = this.props;
     data.sort((a, b) => a.posterior <= b.posterior);
-    console.log(data);
     return (
       <div className="Explainer-box">
-        <p>Our Bayesian friend proposes following concepts as top choices based on confidence (posterior probability)</p>
+        <p>Our "<i>Bayesian</i>" friend proposes following concepts as top choices based on the posterior (interpreted as confidence)</p>
         <div className="Explainer-concepts">
           {
             data.slice(0, 5).map(({title, posterior}, i) =>

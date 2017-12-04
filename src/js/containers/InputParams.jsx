@@ -8,9 +8,10 @@ class InputParams extends Component {
     };
   }
 
-  onBlurDataset = (e) => {
+  onBlurDataset = () => {
     const {a, b} = this.props;
-    const dataset = e.target.value.split(',').map(
+    const {datastring} = this.state;
+    const dataset = datastring.split(',').map(
       (v) => window.parseInt(v, 10)).filter((v) => a <= v && v <= b);
     this.setState({dataset, datastring: dataset.join(',')});
     this.props.onUpdate(dataset);
@@ -25,15 +26,14 @@ class InputParams extends Component {
     const {a, b} = this.props;
     return (
       <div className="Input-params">
-        <p>Enter data values below and see the inference updates</p>
         <div className="Input-params-box">
           <p>Dataset (comma separated values between {a} to {b}): </p>
           <input
             type="text"
             value={datastring}
-            onBlur={this.onBlurDataset}
             onChange={this.onChangeDataset}
           />
+          <input className="Input-params-button" type="button" value="Test!" onClick={this.onBlurDataset} />
           <span className="Input-warn">(Invalid values will be filtered)</span>
         </div>
       </div>
