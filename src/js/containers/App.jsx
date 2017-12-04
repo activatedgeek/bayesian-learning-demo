@@ -27,7 +27,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Bayesian Learning Demo</h1>
           <p className="App-subtitle">
-            Code: <a href='https://github.com/activatedgeek/bayesian-learning-demo'>activatedgeek/bayesian-learning-demo</a>
+            Source Code: <a href='https://github.com/activatedgeek/bayesian-learning-demo'>activatedgeek/bayesian-learning-demo</a>
           </p>
           <p className="App-subtitle">
             Supporting Blog Post: <a href='https://www.sanyamkapoor.com//machine-learning/the-beauty-of-bayesian-learning/'>The Beauty of Bayesian Learning</a>
