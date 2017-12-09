@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Explainer extends Component {
   render() {
     const {data} = this.props;
-    data.sort((a, b) => a.posterior <= b.posterior);
+    data.sort((a, b) => b.posterior - a.posterior);
     return (
       <div className="Explainer-box">
         <p>Our "<i>Bayesian</i>" friend proposes following concepts as top choices based on the posterior (interpreted as confidence)</p>
