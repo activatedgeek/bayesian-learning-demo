@@ -49,6 +49,15 @@ class App extends Component {
             <Chart data={hypothesesList} x="title" y="posterior" />
           </div>
         </div>
+        <div className="Netlify-badge-box">
+          <a rel="noopener noreferrer" target="_blank" href="//www.netlify.com">
+            <img
+              className="Netlify-badge"
+              src="//www.netlify.com/img/global/badges/netlify-color-bg.svg"
+              alt="Build Status"
+            />
+          </a>
+        </div>
       </div>
     );
   }
